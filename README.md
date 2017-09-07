@@ -1,7 +1,7 @@
 # fastify-arangodb
 
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](http://standardjs.com/)  
-<!-- [![Build Status](https://travis-ci.org/fastify/fastify-mongodb.svg?branch=master)](https://travis-ci.org/fastify/fastify-mongodb) -->
+[![Build Status](https://travis-ci.org/timmak/fastify-mongodb.svg?branch=master)](https://travis-ci.org/timmak/fastify-arangodb)
 
 Fastify ArangoDB plugin, with this you can share the same arangodb instance pool in every part of your server.
 
