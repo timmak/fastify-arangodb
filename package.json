@@ -1,0 +1,23 @@
+{
+  "name": "fastify-arangodb",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "standard && tap test.js",
+    "posttest": "tap --coverage-report=lcov && codecov"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "arangojs": "^5.7.0",
+    "fastify-plugin": "^0.1.1",
+    "lodash.isobject": "^3.0.2",
+    "tap": "^10.7.2"
+  },
+  "devDependencies": {
+    "fastify": "^0.26.2",
+    "standard": "^10.0.3"
+  }
+}
