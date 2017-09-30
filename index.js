@@ -1,6 +1,5 @@
 const fp = require('fastify-plugin')
 const ArangoDB = require('arangojs')
-const assert = require('assert')
 const isObject = require('lodash.isobject')
 
 function fastifyArangoDB (fastify, options, next) {
