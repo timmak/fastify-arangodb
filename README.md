@@ -35,7 +35,10 @@ fastify.get('/user/:id', async (req, reply) => {
   collection.document(req.params.id).then(user => {
     reply.send(user)
   })
-}).log(`server listening on ${fastify.server.address().port}`)
+})
+
+fastify.listen(3000, function(){
+  fasitfy.log(`server listening on ${fastify.server.address().port}`)
 })
 ```
 

@@ -30,7 +30,7 @@
     "tap": "^10.7.2"
   },
   "devDependencies": {
-    "fastify": "^0.29.0",
+    "fastify": "^0.30.2",
     "standard": "^10.0.3"
   }
 }
