@@ -27,7 +27,7 @@
     "arangojs": "^5.7.0",
     "fastify-plugin": "^0.1.1",
     "lodash.isobject": "^3.0.2",
-    "tap": "^10.7.2"
+    "tap": "^11.0.0"
   },
   "devDependencies": {
     "fastify": "^0.30.2",
