@@ -25,7 +25,7 @@
   "license": "ISC",
   "dependencies": {
     "arangojs": "^5.7.0",
-    "fastify-plugin": "^0.1.1",
+    "fastify-plugin": "^0.2.0",
     "lodash.isobject": "^3.0.2",
     "tap": "^10.7.2"
   },
