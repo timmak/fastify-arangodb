@@ -24,7 +24,7 @@
   "homepage": "https://github.com/timmak/fastify-arangodb#readme",
   "license": "ISC",
   "dependencies": {
-    "arangojs": "^5.7.0",
+    "arangojs": "^6.0.0",
     "fastify-plugin": "^0.1.1",
     "lodash.isobject": "^3.0.2",
     "tap": "^10.7.2"
