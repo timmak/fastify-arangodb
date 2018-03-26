@@ -3,7 +3,7 @@ const Fastify = require('fastify')
 const fastifyArangoDB = require('./index')
 
 test('fastify.arango should exist', assert => {
-  assert.plan(3)
+  assert.plan(2)
 
   const fastify = Fastify()
 
@@ -18,6 +18,7 @@ test('fastify.arango should exist', assert => {
   )
 
   fastify.ready(err => {
+    console.log(err)
     assert.error(err)
     assert.ok(fastify.arango)
     fastify.close()
