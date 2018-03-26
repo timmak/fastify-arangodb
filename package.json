@@ -1,6 +1,6 @@
 {
   "name": "fastify-arangodb",
-  "version": "1.2.0",
+  "version": "2.0.0",
   "description": "Fastify ArangoDB plugin",
   "main": "index.js",
   "scripts": {
@@ -11,7 +11,12 @@
     "type": "git",
     "url": "git+https://github.com/timmak/fastify-arangodb.git"
   },
-  "keywords": ["fastify", "mongo", "arangodb", "database"],
+  "keywords": [
+    "fastify",
+    "mongo",
+    "arangodb",
+    "database"
+  ],
   "author": "Tim Pinington",
   "bugs": {
     "url": "https://github.com/timmak/fastify-arangodb/issues"
