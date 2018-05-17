@@ -6,6 +6,7 @@ node_js:
   - "6"
   - "5"
   - "4"
+  - "10"
 
 before_install:
   - echo arangodb3 arangodb/password password root | sudo debconf-set-selections  # set username 'root'
