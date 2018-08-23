@@ -11,9 +11,14 @@ function fastifyArangoDB (fastify, options, next) {
     )
   }
   const arango = new ArangoDB.Database(options)
-  fastify.decorate('arango', arango)
+  fastify.decorate('arango', arango).addHook("onClose", close)
 
   next()
+}
+
+function close (fastify, done) {
+  fastify.arango.close()
+  done()
 }
 
 module.exports = fp(fastifyArangoDB, '>=0.13.1')
