@@ -17,7 +17,7 @@ function fastifyArangoDB (fastify, options, next) {
 }
 
 function close (fastify, done) {
-  fastify.arango.close()
+  fastify.arango.close && fastify.arango.close()
   done()
 }
 
