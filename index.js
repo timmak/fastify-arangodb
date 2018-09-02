@@ -11,7 +11,7 @@ function fastifyArangoDB(fastify, { database, auth, ...options }, next) {
       .login(auth.username, auth.password)
       .then(token => arango.useBearerAuth(token))
       .then(() => fastify.decorate("arango", arango).addHook("onClose", close))
-      .then(next)
+      .then(() => next())
       .catch(next);
   } else {
     fastify.decorate("arango", arango).addHook("onClose", close);
