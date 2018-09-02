@@ -21,16 +21,10 @@ You can access the _Arango_ instance via `fastify.arango`
 ```js
 const fastify = require("fastify")();
 
-fastify.register(
-  require("./"),
-  {
-    url: "http://root:root@localhost:8529",
-    database: "test"
-  },
-  err => {
-    if (err) throw err;
-  }
-);
+fastify.register(require("fastify-arangodb"), {
+  url: "http://root:root@localhost:8529",
+  database: "auth"
+});
 
 fastify.get("/user/:id", async (req, reply) => {
   const collection = fastify.arango.collection("users");
