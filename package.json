@@ -4,7 +4,8 @@
   "description": "Fastify ArangoDB plugin",
   "main": "index.js",
   "scripts": {
-    "test": "standard --fix && tap test.js --coverage",
+    "pretest": "node test/setup.js",
+    "test": "tap test/test.js --coverage",
     "posttest": "tap --coverage-report=lcov"
   },
   "repository": {
@@ -24,13 +25,11 @@
   "homepage": "https://github.com/timmak/fastify-arangodb#readme",
   "license": "ISC",
   "dependencies": {
-    "arangojs": "^6.3.0",
-    "fastify-plugin": "^1.1.3",
-    "lodash.isobject": "^3.0.2"
+    "arangojs": "^6.6.0",
+    "fastify-plugin": "^1.2.0"
   },
   "devDependencies": {
-    "fastify": "^1.6.0",
-    "standard": "^11.0.1",
+    "fastify": "^1.11.1",
     "tap": "^12.0.1"
   }
 }
