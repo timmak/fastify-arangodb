@@ -12,7 +12,6 @@ services:
 
 before_install:
   - docker pull arangodb
-  - docker build -t arangodb .
   - docker run -p 8529:8529 -e ARANGO_ROOT_PASSWORD=root arangodb
 
 script:
