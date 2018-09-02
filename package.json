@@ -1,6 +1,6 @@
 {
   "name": "fastify-arangodb",
-  "version": "2.2.1",
+  "version": "3.0.0",
   "description": "Fastify ArangoDB plugin",
   "main": "index.js",
   "scripts": {
