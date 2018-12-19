@@ -26,7 +26,7 @@
   "license": "ISC",
   "dependencies": {
     "arangojs": "^6.6.0",
-    "fastify-plugin": "^1.2.0"
+    "fastify-plugin": "^1.4.0"
   },
   "devDependencies": {
     "fastify": "^1.11.1",
