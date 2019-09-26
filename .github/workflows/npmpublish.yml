@@ -18,11 +18,11 @@ jobs:
           node-version: 12
       - run: npm ci
       - run: npm test
-  services:
-    arangodb:
-      image: arangodb
-      env:
-        ARANGO_ROOT_PASSWORD: root
+    services:
+      arangodb:
+        image: arangodb
+        env:
+          ARANGO_ROOT_PASSWORD: root
 
 #   publish-npm:
 #     needs: build
