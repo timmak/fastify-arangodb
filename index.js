@@ -1,22 +1,22 @@
 const fp = require("fastify-plugin");
 const ArangoDB = require("arangojs");
 
-function fastifyArangoDB(fastify, { database, auth, ...options }, next) {
+async function fastifyArangoDB(fastify, { database, auth, options }, done) {
   const arango = new ArangoDB.Database(options);
   if (database) {
     arango.useDatabase(database);
   }
   if (auth) {
-    arango
-      .login(auth.username, auth.password)
-      .then(token => arango.useBearerAuth(token))
-      .then(() => fastify.decorate("arango", arango).addHook("onClose", close))
-      .then(() => next())
-      .catch(next);
-  } else {
-    fastify.decorate("arango", arango).addHook("onClose", close);
-    next();
+    try {
+      let token = await arango.login(auth.username, auth.password);
+      arango.useBearerAuth(token);
+    } catch (e) {
+      throw new Error(e);
+    }
   }
+  fastify.decorate("arango", arango);
+  fastify.addHook("onClose", close);
+  done();
 }
 
 function close(fastify, done) {
@@ -24,4 +24,7 @@ function close(fastify, done) {
   done();
 }
 
-module.exports = fp(fastifyArangoDB, ">=0.13.1");
+module.exports = fp(fastifyArangoDB, {
+  fastify: ">=2.8.0",
+  name: "fastify-arangodb"
+});

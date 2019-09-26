@@ -14,7 +14,6 @@
   },
   "keywords": [
     "fastify",
-    "mongo",
     "arangodb",
     "database"
   ],
@@ -25,11 +24,14 @@
   "homepage": "https://github.com/timmak/fastify-arangodb#readme",
   "license": "ISC",
   "dependencies": {
-    "arangojs": "^6.6.0",
     "fastify-plugin": "^1.2.0"
   },
   "devDependencies": {
-    "fastify": "^1.11.1",
-    "tap": "^12.0.1"
+    "arangojs": "^6.11.1",
+    "fastify": "2.8.0",
+    "tap": "14.6.5"
+  },
+  "peerDependencies": {
+    "arangojs": "^6.11.1"
   }
 }
