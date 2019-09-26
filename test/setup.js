@@ -1,6 +1,6 @@
 const arango = require("arangojs");
 const DB = new arango.Database({
-  url: "http://0.0.0.0:8529"
+  url: "http://127.0.0.1:8529"
 });
 
 DB.useBasicAuth("root", "root");
