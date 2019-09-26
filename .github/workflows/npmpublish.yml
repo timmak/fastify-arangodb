@@ -16,14 +16,13 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 12
-      - run: npm ci
+      - run: npm install
       - run: npm test
     services:
       arangodb:
         image: arangodb
         env:
           ARANGO_ROOT_PASSWORD: root
-
 #   publish-npm:
 #     needs: build
 #     runs-on: ubuntu-latest
