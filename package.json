@@ -29,7 +29,7 @@
   "devDependencies": {
     "arangojs": "^6.11.1",
     "fastify": "2.9.0",
-    "tap": "14.6.5"
+    "tap": "14.8.3"
   },
   "peerDependencies": {
     "arangojs": "^6.11.1"
