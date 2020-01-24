@@ -27,7 +27,7 @@
     "fastify-plugin": "^1.2.0"
   },
   "devDependencies": {
-    "arangojs": "^6.11.1",
+    "arangojs": "^6.13.0",
     "fastify": "2.9.0",
     "tap": "14.6.5"
   },
